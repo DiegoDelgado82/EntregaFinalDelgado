@@ -1,4 +1,5 @@
 
+import { CartWidget } from "../CartWidget/CartWidget"
 export const NavBar = () => {
   return (
     <>
@@ -6,7 +7,7 @@ export const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
           <a className="navbar-brand" href="index.html"
-            ><img id="logoBrand" src="./src/assets/img/logoBrand.PNG" alt="Logo Centro Estudio"
+            ><img id="logoBrand" src="../src/assets/img/logoBrand.PNG" alt="Logo Centro Estudio"
           /></a>
 
           <button
@@ -64,6 +65,7 @@ export const NavBar = () => {
             </b>
           </div>
         </div>
+        <CartWidget/>
       </nav>
 
     

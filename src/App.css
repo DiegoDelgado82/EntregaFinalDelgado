@@ -8,3 +8,10 @@
 #logoBrand{
   height: 2rem;
 }
+
+#cartWidget
+{
+  padding-right: 10px;
+  align-items: end;
+  
+}
