@@ -9,9 +9,25 @@
   height: 2rem;
 }
 
-#cartWidget
+.cartWidget
 {
-  padding-right: 10px;
-  align-items: end;
   
+ 
+  
+  font-size: 2rem;
+  
+}
+
+#numberCart
+{
+  color:white;
+  text-align: center;
+  
+  font-size: 1.5rem;
+  background-color: black;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  
+
 }

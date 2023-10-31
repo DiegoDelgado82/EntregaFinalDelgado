@@ -11,7 +11,7 @@ export const NavBar = () => {
           /></a>
 
           <button
-            className="navbar-toggler bgMenu"
+            className="navbar-toggler ml-auto  "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -64,6 +64,7 @@ export const NavBar = () => {
               </ul>
             </b>
           </div>
+          
         </div>
         <CartWidget/>
       </nav>

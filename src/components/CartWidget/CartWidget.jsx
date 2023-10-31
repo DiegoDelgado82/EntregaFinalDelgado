@@ -2,7 +2,11 @@
 
 export const CartWidget = () => {
   return (
-    <div id="cartWidget" >Carrito</div>
+    <>
+     <i className="fa fa-shopping-cart cartWidget"  href="#"></i>
+    <a id="numberCart">1</a>
+    </>
+    
   )
 }
 
