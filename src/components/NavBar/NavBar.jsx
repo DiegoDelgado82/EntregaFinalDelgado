@@ -1,14 +1,16 @@
 
 import { CartWidget } from "../CartWidget/CartWidget"
+import logo from "/libro.png"
 export const NavBar = () => {
   return (
     <>
     
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
-          <a className="navbar-brand" href="index.html"
-            ><img id="logoBrand" src="./libro.png" alt="Logo Centro Estudio"
-          /></a>
+        <a className="navbar-brand" href="index.html">
+  <img id="logoBrand" src={logo} alt="Logo Centro Estudio" />
+</a>
+
 
           <button
             className="navbar-toggler ml-auto  "
@@ -30,36 +32,31 @@ export const NavBar = () => {
                   <a
                     className="nav-link text-dark"
                     href="#"
-                    >Clase Particular</a
-                  >
+                    >Clase Particular</a>
                 </li>
                 <li className="nav-item text-dark">
                   <a
                     className="nav-link text-dark"
                     href="#"
-                    >Trabajo Práctico</a
-                  >
+                    >Trabajo Práctico</a>
                 </li>
                 <li className="nav-item text-dark">
                   <a
                     className="nav-link text-dark"
                     href="#"
-                    >Investigación</a
-                  >
+                    >Investigación</a>
                 </li>
                 <li className="nav-item text-dark">
                   <a
                     className="nav-link text-dark"
                     href="#"
-                    >Consulta</a
-                  >
+                    >Consulta</a>
                 </li>
                 <li className="nav-item text-dark">
                   <a
                     className="nav-link text-dark"
                     href="#"
-                    >Contacto</a
-                  >
+                    >Contacto</a>
                 </li>
               </ul>
             </b>
