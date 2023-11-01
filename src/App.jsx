@@ -13,9 +13,6 @@ function App() {
      
       <NavBar/>
       <ItemListContainer greeting={"María"}/>
-       
-      
-      
     
     </>
   )

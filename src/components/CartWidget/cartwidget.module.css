@@ -1,0 +1,18 @@
+
+.numberCart
+{
+  color:white;
+  text-align: center;
+  
+  font-size: 1.1em;
+  background-color: black;
+  border-radius: 100%;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+}
+
+.cartWidget
+{
+  font-size: 2rem; 
+}

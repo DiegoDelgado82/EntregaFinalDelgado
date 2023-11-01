@@ -1,6 +1,7 @@
 
 import { CartWidget } from "../CartWidget/CartWidget"
-import logo from "/libro.png"
+import style from "./navbar.module.css"
+import logo from "../../../libro.png"
 export const NavBar = () => {
   return (
     <>
@@ -8,7 +9,7 @@ export const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
         <a className="navbar-brand" href="index.html">
-  <img id="logoBrand" src={logo} alt="Logo Centro Estudio" />
+  <img id={style.logoBrand} src={logo} alt="Logo Centro Estudio" />
 </a>
 
 
