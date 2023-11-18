@@ -1,4 +1,4 @@
-import style from "./cartWidget.module.css"
+import style from "./cartWidget.css"
 export const CartWidget = () => {
   return (
     <div className="container">
