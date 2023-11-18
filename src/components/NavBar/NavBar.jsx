@@ -1,16 +1,17 @@
-
-import { CartWidget } from "../CartWidget/CartWidget"
-import style from "./navbar.module.css"
 import logo from "../../../libro.png"
+import style from "./navbar.module.css"
+import { CartWidget } from '../CartWidget/CartWidget';
+import {NavLink} from "react-router-dom"
+
 export const NavBar = () => {
   return (
     <>
     
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
-        <a className="navbar-brand" href="index.html">
-  <img id={style.logoBrand} src={logo} alt="Logo Centro Estudio" />
-</a>
+        <NavLink className="navbar-brand" to="/">
+             <img id={style.logoBrand} src={logo} alt="Logo Centro Estudio" />
+        </NavLink>
 
 
           <button
@@ -30,34 +31,34 @@ export const NavBar = () => {
               <ul className="navbar-nav">
                
                 <li className="nav-item text-dark">
-                  <a
+                  <NavLink
                     className="nav-link text-dark"
-                    href="#"
-                    >Clase Particular</a>
+                    to="/cartwidget"
+                    >Clase Particular</NavLink>
                 </li>
                 <li className="nav-item text-dark">
-                  <a
+                  <NavLink
                     className="nav-link text-dark"
-                    href="#"
-                    >Trabajo Práctico</a>
+                    to="/"
+                    >Trabajo Práctico</NavLink>
                 </li>
                 <li className="nav-item text-dark">
-                  <a
+                  <NavLink
                     className="nav-link text-dark"
-                    href="#"
-                    >Investigación</a>
+                    to="/"
+                    >Investigación</NavLink>
                 </li>
                 <li className="nav-item text-dark">
-                  <a
+                  <NavLink
                     className="nav-link text-dark"
-                    href="#"
-                    >Consulta</a>
+                    to="/"
+                    >Consulta</NavLink>
                 </li>
                 <li className="nav-item text-dark">
-                  <a
+                  <NavLink
                     className="nav-link text-dark"
-                    href="#"
-                    >Contacto</a>
+                    to="/"
+                    >Contacto</NavLink>
                 </li>
               </ul>
             </b>
