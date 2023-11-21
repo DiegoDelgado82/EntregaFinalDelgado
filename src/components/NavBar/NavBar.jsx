@@ -33,26 +33,26 @@ export const NavBar = () => {
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/cartwidget"
-                    >Clase Particular</NavLink>
+                   to="/category/claseParticular">
+                    Clase Particular</NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/"
-                    >Trabajo Práctico</NavLink>
+                    to="/category/trabajoPractico">
+                    Trabajo Práctico</NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/"
-                    >Investigación</NavLink>
+                    to="/category/investigacion">
+                      Investigación</NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/"
-                    >Consulta</NavLink>
+                    to="/category/consulta">
+                      Consulta</NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink

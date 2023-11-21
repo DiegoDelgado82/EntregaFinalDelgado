@@ -1,11 +1,15 @@
 const products = [
-  { id: "1", name: "Zapato", img: "url-img", price: 100, category: "calzados", description: "Una Zapato", stock: 10 },
-  { id: "2", name: "Bota", img: "url-img", price: 100, category: "calzados", description: "Una Bota", stock: 10 },
-  { id: "3", name: "Ojota", img: "url-img", price: 100, category: "calzados", description: "Un Ojota", stock: 10 },
-  { id: "4", name: "Zapatilla", img: "url-img", price: 100, category: "calzados", description: "Una Zapatilla", stock: 10 },
-  { id: "5", name: "Remera", img: "url-img", price: 100, category: "ropa", description: "Una Remera", stock: 10 },
-  { id: "6", name: "Camisa", img: "url-img", price: 100, category: "ropa", description: "Una Camisa", stock: 10 },
-  { id: "7", name: "Pantalón", img: "url-img", price: 100, category: "ropa", description: "Una Pantalón", stock: 10 },
+  {id:"1", name:"Matemática 1", descripcion:"Clases particulares Matemática de Primer año", stock:99, category:"claseParticular", price:3500},
+  {id:"2", name:"Matemática 2", descripcion:"Clases particulares Matemática de Segundo año", stock:99, category:"claseParticular"},
+  {id:"3", name:"Matemática 3", descripcion:"Clases particulares Matemática de Tercer año", stock:99, category:"claseParticular"},
+  {id:"4", name:"Matemática 4", descripcion:"Clases particulares Matemática de Cuarto año", stock:99, category:"claseParticular"},
+  {id:"5", name:"Matemática 5", descripcion:"Clases particulares Matemática de Quinto año", stock:99, category:"claseParticular"},
+  {id:"6", name:"Matemática 6", descripcion:"Clases particulares Matemática de Sexto año", stock:99, category:"claseParticular"},
+  {id:"7", name:"Trabajo Práctico Lengua", descripcion:"Asesoramiento en realización de trabajo práctico de Lengua", stock:99,    category:"trabajoPractico"},
+  {id:"8", name:"Trabajo Práctico Geografía", descripcion:"Asesoramiento en realización de trabajo práctico de Geografía", stock:99, category:"trabajoPractico"},
+  {id:"9", name:"Trabajo Práctico Inglés", descripcion:"Asesoramiento en realización de trabajo práctico de Inglés", stock:99,    category:"trabajoPractico"},
+  {id:"10", name:"Trabajo Práctico Matemática", descripcion:"Asesoramiento en realización de trabajo práctico de Matemática", stock:99,category:"trabajoPractico"}
+
 ];
   
   export const getProducts = () => {
@@ -32,7 +36,7 @@ const products = [
             reject(`No se encuentra el productos con el id ${id}`)
           }
           resolve(product);
-        }, 2000);
+        }, 1500);
       } else {
         reject("No hay productos");
       }
