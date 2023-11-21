@@ -1,4 +1,5 @@
-import styles from "./cartwidget.css";
+
+//muestra el carrito de compra con el número de items cargados (falta cargar la cantidad de items. Hacer un componente ItemCountCart)
 export const CartWidget = () => {
   return (
     <div className="container">

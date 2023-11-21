@@ -11,6 +11,12 @@ const products = [
   {id:"10", name:"Trabajo Práctico Matemática", descripcion:"Asesoramiento en realización de trabajo práctico de Matemática", stock:99,category:"trabajoPractico"}
 
 ];
+
+
+
+
+
+
   
   export const getProducts = () => {
     return new Promise((resolve, reject) => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+//Seteamos como nro inicial 1 y como máximo el stock del item
 export const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
   
@@ -19,7 +19,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
 
 
   return (
-    <div>
+    <div className="">
       
         <p>Cantidad de horas</p>
         <button className="btn btn-info mx-2 border-black" onClick={decrement}>
@@ -32,7 +32,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
         
       
       <div className="col-6">
-      <button className="btn btn-outline-primary mt-2 col-8 " onClick={() => onAdd(count)}>Solicitar Servicio</button>
+      <button className="btn btn-outline-primary mt-2 col-10 " onClick={() => onAdd(count)}>Solicitar Servicio</button>
       </div>
      
       

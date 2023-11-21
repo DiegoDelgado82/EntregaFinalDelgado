@@ -1,5 +1,5 @@
 import { ItemCount } from "../ItemCount/ItemCount";
-
+//desectruturamos el item para mostrar la información en una card, agregamos al componente ItemCount para cargar la cantidad
 export const ItemDetail = ({name, descripcion, img, price, stock }) => {
    
     const onAdd = (items) => { 

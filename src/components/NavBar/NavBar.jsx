@@ -3,6 +3,7 @@ import  "./navBar.css"
 import { CartWidget } from '../CartWidget/CartWidget';
 import {NavLink} from "react-router-dom"
 
+//Creamos la barra de navegación con los Links para las distintas rutas. Al final del navBar llamamos al componente CartWidget
 export const NavBar = () => {
   return (
     <>
