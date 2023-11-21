@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../../../asyncMock";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-
+import cargando from "../../assets/img/cargando.gif";
+import "./itemListContainer.css"
 export const ItemListContainer = () => {
   const { category } = useParams();
   
@@ -40,5 +41,5 @@ export const ItemListContainer = () => {
       .catch((error) => console.log(error));
   }, [category]); // Controlamos el cambio de parámetros para recargar el componente y ejecutar el useEffect
 
-  return <>{isLoading ? <h2> Cargando productos... </h2> : <ItemList products={products} />}</>;
+  return <>{isLoading ? <div className="d-flex align-items-center justify-content-center"><img  className="cargando"src={cargando} alt="cargando"/></div>  : <ItemList products={products} />}</>;
 };

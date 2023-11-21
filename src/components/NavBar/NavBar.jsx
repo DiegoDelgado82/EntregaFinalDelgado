@@ -1,5 +1,5 @@
 import logo from "../../../libro.png"
-
+import  "./navBar.css"
 import { CartWidget } from '../CartWidget/CartWidget';
 import {NavLink} from "react-router-dom"
 
@@ -10,7 +10,7 @@ export const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-             <img  src={logo} alt="Logo Centro Estudio" />
+             <img className="logo" src={logo} alt="Logo Centro Estudio" />
         </NavLink>
 
 
