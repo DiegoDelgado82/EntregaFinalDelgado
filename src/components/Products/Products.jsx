@@ -38,7 +38,7 @@ export const Products = ({cat}) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
-    getProductBD('AwPI9SJqJLO67xQiX30T');
+    getProductBD();
   }, [cat]);
 
   return (
