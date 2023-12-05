@@ -3,14 +3,15 @@ import React, { useEffect, useState } from "react";
 import cargando from "../../assets/img/cargando.gif";
 import { db } from "../../config/firebaseConfig";
 import { ItemList } from "../ItemList/ItemList";
-export const Products = () => {
+export const Products = ({cat}) => {
   const [products, setProducts] = useState([]);
 
   const getProductBD = (category) => {
+    console.log(cat)
      const myProducts = category
       ? query(
           collection(db, "producs"),
-          where("price", "===", 7000)
+          where( "category", "==", cat)
         )
       : query(collection(db, "producs"));
 
@@ -26,16 +27,19 @@ export const Products = () => {
           return product;
         });
         console.log(productList);
+        console.log("No hay producto");
         setProducts(productList);
       })
 
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error)),
+      setIsLoading(false);
+      ;
   };
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
-    getProductBD();
-  }, []);
+    getProductBD('AwPI9SJqJLO67xQiX30T');
+  }, [cat]);
 
   return (
     <>
