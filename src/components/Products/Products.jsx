@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import {collection, getDocs, query,where} from "firebase/firestore"
-import { db } from '../../config/firebaseConfig'
-import { ItemDetail} from '../ItemDetail/ItemDetail';
-
+import { collection, getDocs, query, where } from "firebase/firestore";
+import React, { useEffect, useState } from 'react';
+import { db } from '../../config/firebaseConfig';
+import { ItemList } from "../ItemList/ItemList";
+import { Link } from "react-router-dom";
 export const Products = () => {
   const [products, setProducts]= useState([]);
   
@@ -51,24 +51,10 @@ setProducts(productList)
   
     return (
      <>
-     
-<h2>Productos</h2>
-        {
-          //LLAMAR A ITEMLISTCONTAINER???  
-            products.map((product)=>(
-                <div key={product.id}>
-                    <p>Nombre:{product.name}</p>
-                    <p>Descripción:{product.description}</p>
-                    <p>Precio:{product.price}</p>
-                    <hr/>
-                </div>
-                
-
-
-            ))
-        }
-    <div>Products</div>
     
+    
+        <ItemList products={products} />
+      
     </>   
   )
 }

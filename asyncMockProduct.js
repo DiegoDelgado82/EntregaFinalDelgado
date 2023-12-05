@@ -1,4 +1,4 @@
-const products = [
+ const products = [
   {id:"1", name:"Matemática 1", descripcion:"Clases particulares Matemática de Primer año", image:"../../img/mate.jpg", stock:99, category:"claseParticular", price:3500},
   {id:"2", name:"Matemática 2", descripcion:"Clases particulares Matemática de Segundo año",image:"../../img/mate.jpg", stock:99, category:"claseParticular",price:3600},
   {id:"3", name:"Matemática 3", descripcion:"Clases particulares Matemática de Tercer año",image:"../../img/mate.jpg", stock:99, category:"claseParticular",price:3700},
@@ -48,3 +48,5 @@ const products = [
       }
     });
   };
+  
+

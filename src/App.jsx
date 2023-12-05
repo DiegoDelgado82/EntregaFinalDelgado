@@ -6,10 +6,11 @@ function App() {
   return (
     <>
     
-    <Products/>
+    
     
     
       <BrowserRouter>
+      <Products/>
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
