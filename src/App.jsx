@@ -1,10 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Cart, ItemDetailContainer, ItemListContainer, NavBar } from "./components";
+import { Cart, ItemDetailContainer, ItemListContainer, NavBar, Products } from "./components";
 
 function App() {
   return (
     <>
+    
+    <Products/>
+    
+    
       <BrowserRouter>
         <NavBar />
         <Routes>

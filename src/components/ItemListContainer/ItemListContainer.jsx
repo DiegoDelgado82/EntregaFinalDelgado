@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../../../asyncMockProduct";
+//import { getProducts } from "../../config/firebaseConfig.js";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import cargando from "../../assets/img/cargando.gif";
