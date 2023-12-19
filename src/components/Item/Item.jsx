@@ -7,6 +7,7 @@ export const Item = ({id, name, image, description }) => {
       <div className="card ">
         <div className="card-body ">
           <h5 className="card-title">{name}</h5>
+          <h5 className="card-title">{id}</h5>
           <img src={image} alt="Imagen" />
           <p className="card-text"> {description} </p>
           <Link to={`/item/${id}`}>

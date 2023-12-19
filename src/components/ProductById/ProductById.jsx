@@ -3,37 +3,36 @@ import React, { useEffect, useState } from "react";
 import cargando from "../../assets/img/cargando.gif";
 import { db } from "../../config/firebaseConfig";
 import { ItemList } from "../ItemList/ItemList";
-import{ItemDetail} from "../ItemDetail/ItemDetail"
-import { sembrador } from "../Sembrador/Sembrador";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 
 
 
-export const Products = ({cat}) => {
-  const [products, setProducts] = useState([]);
+export const ProductsById = ({id}) => {
+  const [productId, setProducts] = useState([]);
 
-  const getProductBD = (category) => {
-    console.log("cat:"+cat)
-     const myProducts = category
+  const getProductBDId = (idProduct) => {
+    console.log("ID a buscar"+idProduct)
+     const myProduct = idProduct
       ? query(
           collection(db, "products"),
-          where( "category", "==", cat)
+          where( "id", "==",id)
         )
       : query(collection(db, "products"));
 
-    getDocs(myProducts)
+    getDocs(myProduct)
       .then((resp) => {
     
-        const productList = resp.docs.map((doc) => {
-          const product = {
-            id: doc.id,
-            ...doc.data(),
+        const myProduct = {
+          
+            id: resp.docs[0].id,
+            ...resp.docs[0].data()
           };
           setIsLoading(false);
-          return product;
-        });
+          console.log("Producto enviado:"+myProduct)
+          setProducts(myProduct);
+        })
         
-        setProducts(productList);
-      })
+        
 
       .catch((error) => console.log(error)),
       setIsLoading(false);
@@ -44,9 +43,9 @@ export const Products = ({cat}) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
-    getProductBD(cat);
-   //sembrador();
-  }, [cat]);
+    getProductBDId(id);
+    
+  }, [id]);
 
   return (
     <>
@@ -55,7 +54,7 @@ export const Products = ({cat}) => {
           <img className="cargando" src={cargando} alt="cargando" />
         </div>
       ) : (
-        <ItemList products={products} />
+        <ItemDetail key={productId.id}{...productId} />
       )}
 
       
