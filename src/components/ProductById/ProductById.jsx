@@ -34,7 +34,8 @@ export const ProductsById = ({id}) => {
         
         
 
-      .catch((error) => console.log(error)),
+      .catch((error) => alert("NO EXISTE DICHO PRODUCTO")
+      ),
       setIsLoading(false);
       ;
   };
