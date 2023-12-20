@@ -1,19 +1,17 @@
-import logo from "../../../libro.png"
-import  "./navBar.css"
-import { CartWidget } from '../CartWidget/CartWidget';
-import {NavLink} from "react-router-dom"
+import logo from "../../../libro.png";
+import "./navBar.css";
+import { CartWidget } from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 //Creamos la barra de navegación con los Links para las distintas rutas. Al final del navBar llamamos al componente CartWidget
 export const NavBar = () => {
   return (
     <>
-    
-    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar opacity-10">
         <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
-             <img className="logo" src={logo} alt="Logo Centro Estudio" />
-        </NavLink>
-
+          <NavLink className="navbar-brand" to="/">
+            <img className="logo" src={logo} alt="Logo Centro Estudio" />
+          </NavLink>
 
           <button
             className="navbar-toggler ml-auto  "
@@ -30,47 +28,52 @@ export const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <b>
               <ul className="navbar-nav">
-               
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                   to="/category/claseParticular">
-                    Clase Particular</NavLink>
+                    to="/category/claseParticular"
+                  >
+                    Clase Particular
+                  </NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/category/trabajoPractico">
-                    Trabajo Práctico</NavLink>
+                    to="/category/trabajoPractico"
+                  >
+                    Trabajo Práctico
+                  </NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/category/investigacion">
-                      Investigación</NavLink>
+                    to="/category/investigacion"
+                  >
+                    Investigación
+                  </NavLink>
                 </li>
                 <li className="nav-item text-dark">
                   <NavLink
                     className="nav-link text-dark"
-                    to="/category/consulta">
-                      Consulta</NavLink>
+                    to="/category/consulta"
+                  >
+                    Consulta
+                  </NavLink>
                 </li>
                 <li className="nav-item text-dark">
-                  <NavLink
-                    className="nav-link text-dark"
-                    to="/"
-                    >Contacto</NavLink>
+                  <NavLink className="nav-link text-dark" to="/">
+                    Contacto
+                  </NavLink>
                 </li>
               </ul>
             </b>
           </div>
-          
         </div>
-        <CartWidget/>
+
+        <NavLink className="nav-link text-dark" to="/cart">
+          <CartWidget />
+        </NavLink>
       </nav>
-
-    
     </>
-  )
-}
-
+  );
+};

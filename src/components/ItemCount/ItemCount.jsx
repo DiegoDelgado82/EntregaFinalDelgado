@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 //Seteamos como nro inicial 1 y como máximo el stock del item
-export const ItemCount = ({ stock, initial = 1, onAdd }) => {
+export const ItemCount = ({ stock, id, name, price, initial = 1, onAdd }) => {
+
+  const { addItem } = useContext(CartContext);
   const [count, setCount] = useState(initial);
   
   const increment = () => {
@@ -32,7 +36,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
         
       
       <div className="col-6">
-      <button className="btn btn-outline-primary mt-2 col-10 " onClick={() => onAdd(count)}>Solicitar Servicio</button>
+      <button className="btn btn-outline-primary mt-2 col-10 " onClick={() => addItem( {id, name, price}, count )}>Solicitar Servicio</button>
       </div>
      
       

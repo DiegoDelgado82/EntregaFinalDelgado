@@ -14,7 +14,7 @@ export const ItemDetail = ({id,name,image, descripcion, price, stock}) => {
           <img src={image} alt="" />
           <p className="card-text col-12"> {descripcion} </p>
           <p>Precio: {price} </p>
-          <ItemCount stock={stock} onAdd={onAdd} />
+          <ItemCount stock={stock} id={id} name={name} price={price}   onAdd={onAdd} />
         </div>
       </div>
     </div>
