@@ -14,22 +14,17 @@ export const NavBar = () => {
           </NavLink>
 
           <button
-            className="navbar-toggler ml-auto  "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="menuBurger"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="ml-auto d-flex align-items-rigth col-2">
-          <NavLink className="nav-link text-dark" to="/cart">
-          <CartWidget />
-        </NavLink>
-          </div>
+  className="navbar-toggler ml-auto"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarNavDropdown"
+  aria-controls="navbarNavDropdown"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  id="menuBurger"
+>
+  <span className="navbar-toggler-icon"></span>
+</button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <b>
               <ul className="navbar-nav">
@@ -72,6 +67,11 @@ export const NavBar = () => {
                 </li>
               </ul>
             </b>
+          </div>
+          <div className="ml-auto d-flex align-items-rigth ">
+          <NavLink className="nav-link text-dark" to="/cart">
+          <CartWidget />
+        </NavLink>
           </div>
         </div>
 
