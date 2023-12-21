@@ -5,47 +5,35 @@ import { db } from "../../config/firebaseConfig";
 import { ItemList } from "../ItemList/ItemList";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 
+//Componente que busca el producto por ID, en caso de encontrarlo envia la información a ItemDetail
 
-
-export const ProductsById = ({id}) => {
+export const ProductsById = ({ id }) => {
   const [productId, setProducts] = useState([]);
 
   const getProductBDId = (idProduct) => {
-   
-     const myProduct = idProduct
-      ? query(
-          collection(db, "products"),
-          where( "id", "==",id)
-        )
+    const myProduct = idProduct
+      ? query(collection(db, "products"), where("id", "==", id))
       : query(collection(db, "products"));
 
     getDocs(myProduct)
       .then((resp) => {
-    
         const myProduct = {
-          
-            id: resp.docs[0].id,
-            ...resp.docs[0].data()
-          };
-          setIsLoading(false);
+          id: resp.docs[0].id,
+          ...resp.docs[0].data(),
+        };
+        setIsLoading(false);
 
-          setProducts(myProduct);
-        })
-        
-        
+        setProducts(myProduct);
+      })
 
-      .catch((error) => alert("NO EXISTE DICHO PRODUCTO")
-      ),
+      .catch((error) => alert("NO EXISTE DICHO PRODUCTO")),
       setIsLoading(false);
-      ;
   };
 
- 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
     getProductBDId(id);
-    
   }, [id]);
 
   return (
@@ -55,10 +43,8 @@ export const ProductsById = ({id}) => {
           <img className="cargando" src={cargando} alt="cargando" />
         </div>
       ) : (
-        <ItemDetail key={productId.id}{...productId} />
+        <ItemDetail key={productId.id} {...productId} />
       )}
-
-      
     </>
   );
 };

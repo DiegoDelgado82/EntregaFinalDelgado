@@ -1,14 +1,12 @@
-import { useState } from "react";
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
+//Componente que nos muestra la cantidad de items a cargar en el carrito. Tambien se verifica que no se seleccione un stock 0
 
 export const ItemCount = ({ stock, id, name, price, initial = 1 }) => {
   const { addItem } = useContext(CartContext);
   const [count, setCount] = useState(initial);
-
 
   const increment = () => {
     if (count < stock) {
@@ -37,7 +35,6 @@ export const ItemCount = ({ stock, id, name, price, initial = 1 }) => {
       });
     } else {
       addItem({ id, name, price }, count);
-      
     }
   };
 
@@ -59,7 +56,6 @@ export const ItemCount = ({ stock, id, name, price, initial = 1 }) => {
         >
           Solicitar Servicio
         </button>
-        
       </div>
     </div>
   );

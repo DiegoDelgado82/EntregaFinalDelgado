@@ -3,26 +3,19 @@ import React, { useEffect, useState } from "react";
 import cargando from "../../assets/img/cargando.gif";
 import { db } from "../../config/firebaseConfig";
 import { ItemList } from "../ItemList/ItemList";
-import{ItemDetail} from "../ItemDetail/ItemDetail"
-import { sembrador } from "../Sembrador/Sembrador";
 
+//Componente que busca los productos por categoría
 
-
-export const Products = ({cat}) => {
+export const Products = ({ cat }) => {
   const [products, setProducts] = useState([]);
 
   const getProductBD = (category) => {
-    
-     const myProducts = category
-      ? query(
-          collection(db, "products"),
-          where( "category", "==", cat)
-        )
+    const myProducts = category
+      ? query(collection(db, "products"), where("category", "==", cat))
       : query(collection(db, "products"));
 
     getDocs(myProducts)
       .then((resp) => {
-    
         const productList = resp.docs.map((doc) => {
           const product = {
             id: doc.id,
@@ -31,21 +24,19 @@ export const Products = ({cat}) => {
           setIsLoading(false);
           return product;
         });
-        
+
         setProducts(productList);
       })
 
       .catch((error) => console.log(error)),
       setIsLoading(false);
-      ;
   };
 
- 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
     getProductBD(cat);
-   //sembrador();
+    //sembrador();
   }, [cat]);
 
   return (
@@ -57,8 +48,6 @@ export const Products = ({cat}) => {
       ) : (
         <ItemList products={products} />
       )}
-
-      
     </>
   );
 };
