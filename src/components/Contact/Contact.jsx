@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Contact = () => {
     return (
-        <div className="container mt-4">
+        <div className="container d-flex flex-column align-items-center mt-4">
           <h2>Centro de Estudios Lic. Fernanda Miclniezuk</h2>
     
           <div>
