@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { CartWidget } from "../CartWidget/CartWidget";
+import {Form}from "../Form/Form"
 
 export const Cart = () => {
   const { cartItems, totalCartItems, removeItem, totalQuantity } = useContext(CartContext);
@@ -25,6 +26,7 @@ export const Cart = () => {
       </div>
       <hr />
       <h5 className="bg-info ">Suma total del pedido: ${totalCartItems}</h5>
+      <Form />
     </>
   );
 };

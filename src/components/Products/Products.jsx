@@ -12,7 +12,7 @@ export const Products = ({cat}) => {
   const [products, setProducts] = useState([]);
 
   const getProductBD = (category) => {
-    console.log("cat:"+cat)
+    
      const myProducts = category
       ? query(
           collection(db, "products"),

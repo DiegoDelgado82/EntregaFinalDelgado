@@ -25,6 +25,11 @@ export const NavBar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          <div className="ml-auto d-flex align-items-rigth col-2">
+          <NavLink className="nav-link text-dark" to="/cart">
+          <CartWidget />
+        </NavLink>
+          </div>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <b>
               <ul className="navbar-nav">
@@ -70,9 +75,7 @@ export const NavBar = () => {
           </div>
         </div>
 
-        <NavLink className="nav-link text-dark" to="/cart">
-          <CartWidget />
-        </NavLink>
+       
       </nav>
     </>
   );

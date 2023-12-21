@@ -5,10 +5,20 @@ import Swal from 'sweetalert2';
 export const CartContext = createContext(null);
 
 export const CartContextProvider = ({ children }) => {
+
+ 
+
+
+
+ 
   const [cartItems, setCartItems] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
   const [totalQuantity, setTotalQuantity] = useState(0);
+  
 
+
+  
+  
   const addItem = (item, quantity) => {
     const { id, name, price } = item;
   
@@ -30,13 +40,17 @@ export const CartContextProvider = ({ children }) => {
   
       setCartItems([...cartItems, newItem]);
     }
-  
+   
     Swal.fire({
       title: 'Ítem agregado!',
-      text: 'Se ha añadió al carrito.',
+      text: 'Se ha añadido al carrito.',
       icon: 'success',
       timer: 1400,
-    });
+      
+      
+
+    })
+   
   };
   
 
@@ -82,5 +96,5 @@ export const CartContextProvider = ({ children }) => {
     clearCartItems
   };
 
-  return <CartContext.Provider value={objetValue}> {children} </CartContext.Provider>;
+  return <CartContext.Provider value={objetValue}> {children}  </CartContext.Provider>;
 };

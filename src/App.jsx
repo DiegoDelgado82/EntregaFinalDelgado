@@ -2,12 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Cart, CartWidget, ItemDetailContainer, ItemListContainer, NavBar, Products } from "./components";
 import {CartContextProvider} from "./context/CartContext"
+import { FirebaseContextProvider } from "./context/FirebaseContext";
 function App() {
   return (
     <>
     
     
-    
+    <FirebaseContextProvider>
     <CartContextProvider>
       <BrowserRouter>
      
@@ -21,6 +22,7 @@ function App() {
       </BrowserRouter>
       
       </CartContextProvider>
+      </FirebaseContextProvider>
     </>
   );
 }

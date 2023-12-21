@@ -11,7 +11,7 @@ export const ProductsById = ({id}) => {
   const [productId, setProducts] = useState([]);
 
   const getProductBDId = (idProduct) => {
-    console.log("ID a buscar"+idProduct)
+   
      const myProduct = idProduct
       ? query(
           collection(db, "products"),
@@ -28,7 +28,7 @@ export const ProductsById = ({id}) => {
             ...resp.docs[0].data()
           };
           setIsLoading(false);
-          console.log("Producto enviado:"+myProduct)
+
           setProducts(myProduct);
         })
         

@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 //imgur
 export const ItemDetailContainer = () => {
   const { id } = useParams();
-  console.log ("Id por parametro:"+id)
+ 
   return (
     <>
      

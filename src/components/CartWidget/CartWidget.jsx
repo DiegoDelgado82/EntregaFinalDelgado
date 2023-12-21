@@ -14,7 +14,7 @@ export const CartWidget = () => {
         <div className="col-12 d-flex justify-content-end">
           <div className="d-flex align-items-end">
             <i className={'fa fa-shopping-cart cartWidget' }  ></i>
-            <p className="numberCart">{totalQuantity}</p>
+            <b><p className="numberCart">{totalQuantity}</p></b>
           
           </div>
         </div>
